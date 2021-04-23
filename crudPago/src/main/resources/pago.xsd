@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://tell.me/pago"
+    xmlns:tns="http://tell.me/pago" elementFormDefault="qualified">
+
+    <element name="RealizarPagoRequest">
+        <complexType>
+            <sequence>
+                <element name="cantidad_Total" type="float"></element>
+                <element name="tipo_Pago" type="string"></element>
+                <element name="numero_Tarjeta" type="string"></element>
+                <element name="nombre_Dueno" type="string"></element>
+                <element name="apellido_Dueno" type="string"></element>
+                <element name="fecha_Expiracion" type="string"></element>
+                <element name="codigo_Seguridad" type="string"></element>
+            </sequence>
+        </complexType>
+    </element>
+
+    <element name="RealizarPagoResponse">
+        <complexType>
+            <sequence>
+                <element name="folio_Pago" type="string"></element>
+                
+            </sequence>
+        </complexType>
+    </element>
+
+    <element name="CancelarPagoRequest">
+        <complexType>
+            <sequence>
+                <element name="id" type="int"></element>
+            </sequence>
+        </complexType>
+    </element>
+
+    <element name="CancelarPagoResponse">
+        <complexType>
+            <sequence>  
+                <element name="respuesta" type="string"></element>
+            </sequence>
+        </complexType>
+    </element>
+
+    <element name="BuscarPagosRequest">
+        <complexType>
+            <sequence>
+                <element name="id" type="int"></element>
+            </sequence>
+        </complexType>
+    </element>
+
+    <element name="BuscarPagosResponse">
+        <complexType>
+            <sequence>
+                <element name="id" type="int"></element>
+                <element name="cantidad_Total" type="float"></element>
+                <element name="tipo_Pago" type="string"></element>
+                <element name="fecha_Compra" type="string"></element>
+                <element name="hora_Compra" type="string"></element>
+            </sequence>
+        </complexType> 
+    </element>
+
+    <element name="EliminarPagoRequest">
+        <complexType>
+            <sequence>
+                <element name="id" type="int"></element>
+            </sequence>
+        </complexType>
+    </element>
+     
+    <element name="EliminarPagoResponse">
+        <complexType>
+            <sequence>  
+                <element name="respuesta" type="string"></element>
+            </sequence>
+        </complexType>
+    </element>
+
+    
+
+</schema>
