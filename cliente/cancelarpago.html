@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Pago</title>
+    <script src ="https://unpkg.com/axios/dist/axios.min.js"> </script>
+        <!-- Bootstrap core CSS -->
+<link href="bootstrap.min.css" rel="stylesheet">
+
+<style>
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+</style>
+<!-- Custom styles for this template -->
+<link href="form-validation.css" rel="stylesheet">
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body class="bg-light">
+    <div class="py-5 text-center">
+        <img class="d-block mx-auto mb-4" src="iconPago.png" alt="" width="82" height="82">
+        <h2>cancelar Pago</h2>
+        <p class="lead">Ingrese el ID correspondiente</p>
+      </div>
+    <!--  <form action="http://localhost:80/ws/calculadora" method="POST">-->
+        <form >
+            <div class="py-5 text-center" >
+                <h4 class="d-flex justify-content-between align-items-center mb-3">
+                  <span class="text-muted">Ingresa el ID</span>
+                  
+                </h4>
+                <ul class="list-group mb-3">
+                  <li class="list-group-item d-flex justify-content-between">
+                    
+                      <span></span>
+                      <input type="text" class="form-control" id="id_pedido" placeholder="" value="" required>
+                      <div class="invalid-feedback">
+                        Total is required.
+                      </div>
+                    
+                  </li>
+                </ul>
+                <input  type="button" value="Hacer petición" onclick="soap()">
+              </div>
+        
+
+        
+
+    </form>
+    <script src="cancelar.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+</body>
+</html>
